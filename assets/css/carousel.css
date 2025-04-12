@@ -1,0 +1,77 @@
+/* Carousel Mode */
+.cg-carousel-mode {
+    position: relative;
+    overflow: hidden;
+    padding: 0 40px;
+}
+
+.cg-carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+    will-change: transform;
+}
+
+.cg-carousel-mode .cg-grid-item {
+    flex-shrink: 0;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.cg-carousel-prev,
+.cg-carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background: rgba(255,255,255,0.9);
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    z-index: 10;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cg-carousel-prev {
+    left: 0;
+}
+
+.cg-carousel-next {
+    right: 0;
+}
+
+.cg-carousel-prev svg,
+.cg-carousel-next svg {
+    width: 20px;
+    height: 20px;
+    fill: #000;
+}
+
+.cg-carousel-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    gap: 8px;
+}
+
+.cg-carousel-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #ccc;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.cg-carousel-dot.active {
+    background: #333;
+}
+
+/* Touch improvements */
+.cg-carousel-inner {
+    touch-action: pan-y;
+}
